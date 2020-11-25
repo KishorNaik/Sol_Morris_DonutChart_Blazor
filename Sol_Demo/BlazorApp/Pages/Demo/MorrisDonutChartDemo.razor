@@ -1,0 +1,20 @@
+﻿@if (this.IsLoad == false)
+{
+    <h1>Loading..</h1>
+}
+else
+{
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <button class="btn btn-dark" @onclick="this.OnClickDisplayDonutChart">Show Sales Chart</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <MorrisDonutsChart @ref="this.MorrisDonutsChartReferanceId" ItemSource="this.ItemSource">
+                </MorrisDonutsChart>
+            </div>
+        </div>
+    </div>
+}
